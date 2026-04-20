@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 40170bb219ca2e441a39e64e77cbf611
+guid: 3c7434a2e0788224d911db3f7b805d73
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2049864309906518573
-    second: RedGrid_0
+      213: 5800915590215233699
+    second: XO_0
+  - first:
+      213: -4543041181297324008
+    second: XO_1
+  - first:
+      213: 5828903514592741260
+    second: XO_2
+  - first:
+      213: -5029703094226174211
+    second: XO_3
+  - first:
+      213: -5671269848223593115
+    second: XO_4
+  - first:
+      213: -1950665664707622766
+    second: XO_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 341
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedGrid_0
+      name: XO_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 682
-        width: 341
-        height: 341
+        x: 38
+        y: 363
+        width: 88
+        height: 105
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,184 +169,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d22babdaab4927c10800000000000000
-      internalID: 2049864309906518573
+      spriteID: 3a0fdc6aefdf08050800000000000000
+      internalID: 5800915590215233699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedGrid_1
+      name: XO_1
       rect:
         serializedVersion: 2
-        x: 341
-        y: 682
-        width: 341
-        height: 341
+        x: 152
+        y: 379
+        width: 79
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e6b5a327dbe71f64aa40bbffe86c310d
-      internalID: -1586415025
+      spriteID: 8105dcc9d10e3f0c0800000000000000
+      internalID: -4543041181297324008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedGrid_2
+      name: XO_2
       rect:
         serializedVersion: 2
-        x: 682
-        y: 682
-        width: 341
-        height: 341
+        x: 38
+        y: 201
+        width: 97
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 05fdb35651338544a90eace5c16cfd70
-      internalID: -449912317
+      spriteID: c8783591ddc64e050800000000000000
+      internalID: 5828903514592741260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedGrid_3
+      name: XO_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 341
-        width: 341
-        height: 341
+        x: 165
+        y: 214
+        width: 74
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 93437fbc0436fd54bb61073ee203e806
-      internalID: 1726698556
+      spriteID: dfe37fe2fa7e23ab0800000000000000
+      internalID: -5029703094226174211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedGrid_4
+      name: XO_4
       rect:
         serializedVersion: 2
-        x: 341
-        y: 341
-        width: 341
-        height: 341
+        x: 38
+        y: 69
+        width: 70
+        height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 51cdf70b2b6a92a4786c7f07c5b30606
-      internalID: -1587784548
+      spriteID: 56dcf37ee1a9b41b0800000000000000
+      internalID: -5671269848223593115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedGrid_5
+      name: XO_5
       rect:
         serializedVersion: 2
-        x: 682
-        y: 341
-        width: 341
-        height: 341
+        x: 155
+        y: 78
+        width: 73
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 22d67151bc19bc646afe65e746d890ae
-      internalID: -855889605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedGrid_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 341
-        height: 341
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 851d6cd909be7be4dad5e7698a23ff15
-      internalID: 2128522761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedGrid_7
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 0
-        width: 341
-        height: 341
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d09ab0e883a99084aa6267bba6a817dc
-      internalID: 1736908897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RedGrid_8
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 0
-        width: 341
-        height: 341
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a332d9493b1f3b4dbed43ab07050c0e
-      internalID: 1632662612
+      spriteID: 2980d8bb9e7dde4e0800000000000000
+      internalID: -1950665664707622766
       vertices: []
       indices: 
       edges: []
@@ -340,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f67c68dee3b18474ba931acd650f7ad2
+    spriteID: 409d8d07e6e7717459dedd0433d04ea7
     internalID: 0
     vertices: []
     indices: 
@@ -350,17 +299,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":341.0,"y":341.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      RedGrid_0: 2049864309906518573
-      RedGrid_1: -1586415025
-      RedGrid_2: -449912317
-      RedGrid_3: 1726698556
-      RedGrid_4: -1587784548
-      RedGrid_5: -855889605
-      RedGrid_6: 2128522761
-      RedGrid_7: 1736908897
-      RedGrid_8: 1632662612
+      XO_0: 5800915590215233699
+      XO_1: -4543041181297324008
+      XO_2: 5828903514592741260
+      XO_3: -5029703094226174211
+      XO_4: -5671269848223593115
+      XO_5: -1950665664707622766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
