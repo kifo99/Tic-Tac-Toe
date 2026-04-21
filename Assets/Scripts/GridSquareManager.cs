@@ -1,13 +1,21 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GridSquareManager : MonoBehaviour
+public class GridSquareManager : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     private Image _oImage;
     [SerializeField] private Image _xImage;
 
     private GridSquareState _currentState = GridSquareState.empty;
+
+    private int _squareId;
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        GameManager.instance.GridSquareClicked(_squareId);
+    }
 
     public void SetSquare(GridSquareState _newState)
     {
@@ -26,6 +34,11 @@ public class GridSquareManager : MonoBehaviour
             _oImage.enabled = true;
             _xImage.enabled = false;
         }
+    }
+
+    public void SetSquareId(int id)
+    {
+        _squareId = id;
     }
 }
 
