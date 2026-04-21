@@ -7,8 +7,18 @@ public class GameManager : MonoBehaviour
   private GridSquareState _playerOneSquareState;
   private GridSquareState _playerTwoSquareState;
   private bool _awaitingInput = false;
-
   private Turn _currentTurn;
+  private GameResults _currentGameStates;
+  private readonly int[][] _winPatterns = new int[][] {
+  new int[] {0, 1, 2},
+  new int[] {3, 4, 5},
+  new int[] {6, 7, 8},
+  new int[] {0, 3, 6},
+  new int[] {1, 4, 7},
+  new int[] {2, 5, 8},
+  new int[] {0, 4, 8},
+  new int[] {2, 4, 6}
+};
 
   public void Awake()
   {
@@ -24,6 +34,8 @@ public class GameManager : MonoBehaviour
   }
   private void StartNewGame()
   {
+    // Setting state of a game
+    _currentGameStates = GameResults.ongoing;
     // Resetting the grid
     _gridManager.ResetGrid();
 
@@ -60,10 +72,54 @@ public class GameManager : MonoBehaviour
       state = _playerTwoSquareState;
     }
     _gridManager.SetSpecificSquare(state, selectedSquare);
-    ChangeTurn();
-    _awaitingInput = true;
+
+    bool gameEnded = CheckIfGameEnded();
+    if (!gameEnded)
+    {
+      ChangeTurn();
+      _awaitingInput = true;
+    }
   }
 
+  private bool CheckIfGameEnded()
+  {
+
+    if (CheckForWin(_playerOneSquareState))
+    {
+      _currentGameStates = GameResults.playerOneWin;
+      Debug.Log("Player1 is a winner!");
+      return true;
+    }
+
+    if (CheckForWin(_playerTwoSquareState))
+    {
+      _currentGameStates = GameResults.playerTwoWin;
+      Debug.Log("Player2 is a winner!");
+      return true;
+    }
+    bool gridFull = _gridManager.CheckIfGridFull();
+
+    if (gridFull)
+    {
+      _currentGameStates = GameResults.draw;
+      Debug.Log("Draw!");
+      return true;
+    }
+
+    return false;
+  }
+
+  private bool CheckForWin(GridSquareState squareState)
+  {
+    foreach (var pattern in _winPatterns)
+    {
+      if (_gridManager.GetSpecificSquareState(pattern[0]) == squareState && _gridManager.GetSpecificSquareState(pattern[1]) == squareState && _gridManager.GetSpecificSquareState(pattern[2]) == squareState)
+      {
+        return true;
+      }
+    }
+    return false;
+  }
   public void ChangeTurn()
   {
     if (_currentTurn == Turn.playerOne)
@@ -91,3 +147,4 @@ public class GameManager : MonoBehaviour
 
 
 public enum Turn { playerOne, playerTwo }
+public enum GameResults { ongoing, draw, playerOneWin, playerTwoWin }

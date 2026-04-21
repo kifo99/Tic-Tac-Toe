@@ -7,11 +7,6 @@ public class GridManager : MonoBehaviour
 
     public void ResetGrid()
     {
-        foreach (GridSquareManager square in _grid)
-        {
-            square.SetSquare(GridSquareState.empty);
-        }
-
         for (int i = 0; i < _grid.Length; i++)
         {
             _grid[i].SetSquare(GridSquareState.empty);
@@ -29,5 +24,17 @@ public class GridManager : MonoBehaviour
         return _grid[squareId].GetSquareState();
     }
 
+    public bool CheckIfGridFull()
+    {
+        foreach (GridSquareManager square in _grid)
+        {
+            if (square.GetSquareState() == GridSquareState.empty)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
 
