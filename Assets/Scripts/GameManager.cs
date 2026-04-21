@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
 
   public void GridSquareClicked(int clickedSquare)
   {
-    if (_awaitingInput == false)
+    if (_awaitingInput == false || _currentGameStates != GameResults.ongoing)
     {
       return;
     }
