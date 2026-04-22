@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
   public static GameManager instance;
   [SerializeField] private GridManager _gridManager;
+  [SerializeField] private Animator _verticalAnimator;
+  [SerializeField] private Animator _horizontalAnimator;
   private GridSquareState _playerOneSquareState;
   private GridSquareState _playerTwoSquareState;
   private bool _awaitingInput = false;
@@ -38,6 +40,9 @@ public class GameManager : MonoBehaviour
     _currentGameStates = GameResults.ongoing;
     // Resetting the grid
     _gridManager.ResetGrid();
+
+    _verticalAnimator.Play("Draw");
+    _horizontalAnimator.Play("Draw");
 
     // Randomly deciding who has first turn
     int firstTurn = Random.Range(0, 2);
