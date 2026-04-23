@@ -15,7 +15,6 @@ public class GameTimer : MonoBehaviour
         _isRunning = true;
     }
 
-
     public void StopTimer()
     {
         _isRunning = false;
@@ -32,5 +31,10 @@ public class GameTimer : MonoBehaviour
 
             _timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
+    }
+
+    public float GetTime()
+    {
+        return _timeElapsed;
     }
 }
