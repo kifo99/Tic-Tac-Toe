@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
   [SerializeField] private GridManager _gridManager;
   [SerializeField] private Animator _verticalAnimator;
   [SerializeField] private Animator _horizontalAnimator;
+  [SerializeField] private GameTimer _gameTimer;
   private GridSquareState _playerOneSquareState;
   private GridSquareState _playerTwoSquareState;
   private bool _awaitingInput = false;
@@ -34,6 +35,11 @@ public class GameManager : MonoBehaviour
     }
     StartNewGame();
   }
+
+  public void Update()
+  {
+    _gameTimer.UpdateTimerUi();
+  }
   private void StartNewGame()
   {
     // Setting state of a game
@@ -41,8 +47,12 @@ public class GameManager : MonoBehaviour
     // Resetting the grid
     _gridManager.ResetGrid();
 
+    // Drawing grid lines
     _verticalAnimator.Play("Draw");
     _horizontalAnimator.Play("Draw");
+
+    // Starting game timer
+    _gameTimer.StartTimer();
 
     // Randomly deciding who has first turn
     int firstTurn = Random.Range(0, 2);
@@ -93,6 +103,7 @@ public class GameManager : MonoBehaviour
     {
       _currentGameStates = GameResults.playerOneWin;
       Debug.Log("Player1 is a winner!");
+      _gameTimer.StopTimer();
       return true;
     }
 
@@ -100,6 +111,7 @@ public class GameManager : MonoBehaviour
     {
       _currentGameStates = GameResults.playerTwoWin;
       Debug.Log("Player2 is a winner!");
+      _gameTimer.StopTimer();
       return true;
     }
     bool gridFull = _gridManager.CheckIfGridFull();
@@ -108,6 +120,7 @@ public class GameManager : MonoBehaviour
     {
       _currentGameStates = GameResults.draw;
       Debug.Log("Draw!");
+      _gameTimer.StopTimer();
       return true;
     }
 
