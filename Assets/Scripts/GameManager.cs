@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
   private bool _awaitingInput = false;
   private Turn _currentTurn;
   private GameResults _currentGameStates;
+  private int _gameCounter = 0;
 
   private int _playerOneMove = 0;
   private int _playerTwoMove = 0;
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
     {
       Debug.LogError("There are more than one GameManagers in this scene!");
     }
+    // Drawing grid lines
+    _verticalAnimator.Play("Draw");
+    _horizontalAnimator.Play("Draw");
     StartNewGame();
   }
 
@@ -48,16 +52,16 @@ public class GameManager : MonoBehaviour
   {
     _gameTimer.UpdateTimerUi();
   }
-  private void StartNewGame()
+  public void StartNewGame()
   {
+    // Hiding game over popup
+    _gameOverPanel.SetActive(false);
+
     // Setting state of a game
     _currentGameStates = GameResults.ongoing;
+
     // Resetting the grid
     _gridManager.ResetGrid();
-
-    // Drawing grid lines
-    _verticalAnimator.Play("Draw");
-    _horizontalAnimator.Play("Draw");
 
     // Starting game timer
     _gameTimer.StartTimer();
@@ -81,7 +85,15 @@ public class GameManager : MonoBehaviour
     _awaitingInput = true;
   }
 
+  public void IncreaseGameCounter()
+  {
+    _gameCounter++;
+  }
 
+  public int GetGameCounter()
+  {
+    return _gameCounter;
+  }
   private void ProcessTurn(Turn turn, int selectedSquare)
   {
     _awaitingInput = false;
