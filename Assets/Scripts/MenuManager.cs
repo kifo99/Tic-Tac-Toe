@@ -1,8 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class GridAnimationManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
+
     [SerializeField] private Animator _animatorHorizontalLines;
     [SerializeField] private Animator _animatorVerticalLines;
     [SerializeField] private GridManager _gridManager;
@@ -10,6 +11,7 @@ public class GridAnimationManager : MonoBehaviour
 
     [SerializeField] private float _spawnDelay = 0.4f;
     [SerializeField] private float _resetDelay = 1.5f;
+
 
     void Start()
     {
@@ -24,24 +26,38 @@ public class GridAnimationManager : MonoBehaviour
         {
             _gridManager.ResetGrid();
 
-            // Fill grid randomly
+            GridSquareState currentTurn = (Random.value > 0.5f)
+                ? GridSquareState.x
+                : GridSquareState.o;
+
             while (!_gridManager.CheckIfGridFull())
             {
                 int randomIndex = Random.Range(0, 9);
 
                 if (_gridManager.GetSpecificSquareState(randomIndex) == GridSquareState.empty)
                 {
-                    GridSquareState randomState =
-                        (Random.value > 0.5f) ? GridSquareState.x : GridSquareState.o;
-
-                    _gridManager.SetSpecificSquare(randomState, randomIndex);
+                    _gridManager.SetSpecificSquare(currentTurn, randomIndex);
 
                     yield return new WaitForSeconds(_spawnDelay);
+
+                    if (TicTacToeUtils.instance.CheckForWin(currentTurn, _gridManager))
+                    {
+                        yield return new WaitForSeconds(1f);
+                        break;
+                    }
+
+                    currentTurn = (currentTurn == GridSquareState.x)
+                        ? GridSquareState.o
+                        : GridSquareState.x;
                 }
             }
 
-            // Wait before clearing
             yield return new WaitForSeconds(_resetDelay);
         }
+    }
+
+    public void StartPopup()
+    {
+
     }
 }

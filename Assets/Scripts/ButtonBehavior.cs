@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonBehavior : MonoBehaviour
 {
-
-
+    [SerializeField] private UIPanelData _uiData;
     public void RetryGame()
     {
         GameManager.instance.IncreaseGameCounter();
@@ -14,5 +13,31 @@ public class ButtonBehavior : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene("PlayScene");
+    }
+
+
+    public void OnPlayGame()
+    {
+        Debug.Log(_uiData.GetPlayPanel());
+        UIManager.instance.OpenPanel(_uiData.GetPlayPanel());
+    }
+
+    public void OnStats()
+    {
+        UIManager.instance.OpenPanel(_uiData.GetStatsPanel());
+    }
+
+    public void OnSettings()
+    {
+        UIManager.instance.OpenPanel(_uiData.GetSettingsPanel());
+    }
+
+    public void OnExit()
+    {
+        UIManager.instance.OpenPanel(_uiData.GetExitPanel());
+    }
+    public void OnBack()
+    {
+        UIManager.instance.ClosePanel();
     }
 }

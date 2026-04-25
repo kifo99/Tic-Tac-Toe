@@ -21,16 +21,7 @@ public class GameManager : MonoBehaviour
 
   private int _playerOneMove = 0;
   private int _playerTwoMove = 0;
-  private readonly int[][] _winPatterns = new int[][] {
-  new int[] {0, 1, 2},
-  new int[] {3, 4, 5},
-  new int[] {6, 7, 8},
-  new int[] {0, 3, 6},
-  new int[] {1, 4, 7},
-  new int[] {2, 5, 8},
-  new int[] {0, 4, 8},
-  new int[] {2, 4, 6}
-};
+
 
   public void Awake()
   {
@@ -133,7 +124,7 @@ public class GameManager : MonoBehaviour
     int minutes = Mathf.FloorToInt(_gameTimer.GetTime() / 60f);
     int seconds = Mathf.FloorToInt(_gameTimer.GetTime() % 60f);
 
-    if (CheckForWin(_playerOneSquareState))
+    if (TicTacToeUtils.instance.CheckForWin(_playerOneSquareState, _gridManager))
     {
 
       _currentGameStates = GameResults.playerOneWin;
@@ -142,7 +133,7 @@ public class GameManager : MonoBehaviour
       return true;
     }
 
-    if (CheckForWin(_playerTwoSquareState))
+    if (TicTacToeUtils.instance.CheckForWin(_playerTwoSquareState, _gridManager))
     {
       _currentGameStates = GameResults.playerTwoWin;
       GameOverPopup("Player 2 win!");
@@ -170,17 +161,7 @@ public class GameManager : MonoBehaviour
     _gameOverPanel.SetActive(true);
     _gameResultText.text = $"{popupText} Timer: {minutes}:{seconds}";
   }
-  private bool CheckForWin(GridSquareState squareState)
-  {
-    foreach (var pattern in _winPatterns)
-    {
-      if (_gridManager.GetSpecificSquareState(pattern[0]) == squareState && _gridManager.GetSpecificSquareState(pattern[1]) == squareState && _gridManager.GetSpecificSquareState(pattern[2]) == squareState)
-      {
-        return true;
-      }
-    }
-    return false;
-  }
+
   public void ChangeTurn()
   {
     if (_currentTurn == Turn.playerOne)
