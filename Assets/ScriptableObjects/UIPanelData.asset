@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143fe5d703913c34da39412589e92b38, type: 3}
   m_Name: UIPanelData
   m_EditorClassIdentifier: Assembly-CSharp::UIPanelData
-  PlayPanel: {fileID: 4345839705193419444, guid: a5dd679d24e62d24c9581b5bf751ae14, type: 3}
-  StatsPanel: {fileID: 8600156047901256035, guid: 44518ba97b3d1fb4ca0a3375a3040a42, type: 3}
-  SettingsPanel: {fileID: 3429441700724432789, guid: b8ec882e447901848bbfbfb36250d8b7, type: 3}
-  ExitPanel: {fileID: 8172586994648406174, guid: f41581e0ebc7c0f4f8530bb2b738112a, type: 3}
+  _playPanel: {fileID: 4345839705193419444, guid: a5dd679d24e62d24c9581b5bf751ae14, type: 3}
+  _statsPanel: {fileID: 8600156047901256035, guid: 44518ba97b3d1fb4ca0a3375a3040a42, type: 3}
+  _settingsPanel: {fileID: 3429441700724432789, guid: b8ec882e447901848bbfbfb36250d8b7, type: 3}
+  _exitPanel: {fileID: 8172586994648406174, guid: f41581e0ebc7c0f4f8530bb2b738112a, type: 3}

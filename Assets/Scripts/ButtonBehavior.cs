@@ -36,6 +36,16 @@ public class ButtonBehavior : MonoBehaviour
     {
         UIManager.instance.OpenPanel(_uiData.GetExitPanel());
     }
+
+    public void OnStart()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void OnThemeSelection(string themeName)
+    {
+        ThemeManager.instance.SetTheme(themeName);
+    }
     public void OnBack()
     {
         UIManager.instance.ClosePanel();

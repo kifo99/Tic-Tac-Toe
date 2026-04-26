@@ -420,6 +420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3732524459364073344, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnStart
+      objectReference: {fileID: 0}
     - target: {fileID: 4455859877859629399, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
       propertyPath: m_Name
       value: Button
@@ -536,31 +540,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThemeButton
       objectReference: {fileID: 0}
-    - target: {fileID: 4350075886951125265, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
-      propertyPath: m_Color.a
-      value: 0
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4350075886951125265, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4350075886951125265, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4350075886951125265, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206277226309177703, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
-      propertyPath: m_text
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 2597394432440078563}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnThemeSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Classic Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+--- !u!114 &2597394432440078563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8682346179107329092, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+  m_PrefabInstance: {fileID: 6662565066363274407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760ea4273d8ffe94395a33a2444695b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
 --- !u!224 &5906030774586421222 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 972847967280900929, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
@@ -682,6 +701,30 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1778398433031367341}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnThemeSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Default Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7617679571636145708, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -691,6 +734,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+--- !u!114 &1778398433031367341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8682346179107329092, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+  m_PrefabInstance: {fileID: 6977131536954670825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760ea4273d8ffe94395a33a2444695b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
 --- !u!224 &7877781155459012008 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 972847967280900929, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
@@ -812,6 +866,46 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1062966974674241669}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnThemeSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Sketch Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263608924212224632, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7617679571636145708, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -821,6 +915,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+--- !u!114 &1062966974674241669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8682346179107329092, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}
+  m_PrefabInstance: {fileID: 8556145558883376321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760ea4273d8ffe94395a33a2444695b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
 --- !u!224 &8880475178681415552 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 972847967280900929, guid: 57c1f62c78fbbcd4a8ed0de7f1500ed4, type: 3}

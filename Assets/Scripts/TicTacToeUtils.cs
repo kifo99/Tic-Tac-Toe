@@ -23,7 +23,7 @@ public class TicTacToeUtils : MonoBehaviour
         }
         else
         {
-            Debug.LogError("There are more than one GameManagers in this scene!");
+            Debug.LogError("There are more than one instances in this scene!");
         }
     }
 

@@ -4,13 +4,45 @@ using UnityEngine.UI;
 
 public class GridSquareManager : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField]
-    private Image _oImage;
+    [SerializeField] private Image _oImage;
     [SerializeField] private Image _xImage;
 
+    private XOTheme _theme;
     private GridSquareState _currentState = GridSquareState.empty;
-
     private int _squareId;
+
+    private void Start()
+    {
+        _oImage.enabled = false;
+        _xImage.enabled = false;
+
+        ApplyTheme();
+    }
+
+    private void ApplyTheme()
+    {
+        if (ThemeManager.instance == null) return;
+
+        _theme = ThemeManager.instance.GetCurrentTheme();
+
+        if (_theme != null)
+        {
+            _xImage.sprite = _theme.xSprite;
+            _oImage.sprite = _theme.oSprite;
+        }
+    }
+
+    public void RefreshTheme()
+    {
+        if (ThemeManager.instance == null) return;
+
+        _theme = ThemeManager.instance.GetCurrentTheme();
+
+        if (_theme == null) return;
+
+        _xImage.sprite = _theme.xSprite;
+        _oImage.sprite = _theme.oSprite;
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -48,6 +80,5 @@ public class GridSquareManager : MonoBehaviour, IPointerClickHandler
         _squareId = id;
     }
 }
-
 
 public enum GridSquareState { empty, x, o };
