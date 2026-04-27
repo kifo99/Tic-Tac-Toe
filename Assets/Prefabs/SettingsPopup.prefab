@@ -90,6 +90,8 @@ GameObject:
   - component: {fileID: 4853375226068382545}
   - component: {fileID: 6224545416944189885}
   - component: {fileID: 8631764791751271371}
+  - component: {fileID: 6180503479032039901}
+  - component: {fileID: 3064162531612819551}
   m_Layer: 0
   m_Name: SettingsPopup
   m_TagString: Untagged
@@ -158,6 +160,34 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6180503479032039901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429441700724432789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92547006222a0e642a0864d6b4ebabd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _musicToggle: {fileID: 901800579496113406}
+  _sfxToggle: {fileID: 6136260269274990981}
+--- !u!114 &3064162531612819551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429441700724432789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d569f4ff26be4439f9c26b442a2c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _musicToggle: {fileID: 901800579496113406}
+  _sfxToggle: {fileID: 6136260269274990981}
 --- !u!1 &3543245520867528927
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9108613166554149465}
   - component: {fileID: 901800579496113406}
+  - component: {fileID: 4656064222287411395}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -242,8 +273,33 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4656064222287411395}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnMusicToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &4656064222287411395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543245520867528927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760ea4273d8ffe94395a33a2444695b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
+  _uiData: {fileID: 11400000, guid: a0b0a954c16895448a40b263eea76de9, type: 2}
 --- !u!1 &3687789743392608794
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443315819677657861}
   - component: {fileID: 6136260269274990981}
+  - component: {fileID: 8562323423273893000}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -709,8 +766,33 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8562323423273893000}
+        m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
+        m_MethodName: OnSFXToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &8562323423273893000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8087870648313156479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760ea4273d8ffe94395a33a2444695b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
+  _uiData: {fileID: 11400000, guid: a0b0a954c16895448a40b263eea76de9, type: 2}
 --- !u!1 &8643819563432629166
 GameObject:
   m_ObjectHideFlags: 0

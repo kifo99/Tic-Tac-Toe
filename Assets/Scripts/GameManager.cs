@@ -88,7 +88,9 @@ public class GameManager : MonoBehaviour
   private void ProcessTurn(Turn turn, int selectedSquare)
   {
     _awaitingInput = false;
+
     GridSquareState state = GridSquareState.empty;
+
     if (turn == Turn.playerOne)
     {
       state = _playerOneSquareState;
@@ -121,14 +123,12 @@ public class GameManager : MonoBehaviour
 
   private bool CheckIfGameEnded()
   {
-    int minutes = Mathf.FloorToInt(_gameTimer.GetTime() / 60f);
-    int seconds = Mathf.FloorToInt(_gameTimer.GetTime() % 60f);
     bool gridFull = _gridManager.CheckIfGridFull();
 
     if (TicTacToeUtils.instance.CheckForWin(_playerOneSquareState, _gridManager))
     {
       _currentGameStates = GameResults.playerOneWin;
-      StatsManager.instance.RecordGame(GameResults.playerOneWin, _gameTimer.GetTime()); // ADD
+      StatsManager.instance.RecordGame(GameResults.playerOneWin, _gameTimer.GetTime());
       GameOverPopup("Player 1 win!");
       _gameTimer.StopTimer();
       return true;
@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
     if (TicTacToeUtils.instance.CheckForWin(_playerTwoSquareState, _gridManager))
     {
       _currentGameStates = GameResults.playerTwoWin;
-      StatsManager.instance.RecordGame(GameResults.playerTwoWin, _gameTimer.GetTime()); // ADD
+      StatsManager.instance.RecordGame(GameResults.playerTwoWin, _gameTimer.GetTime());
       GameOverPopup("Player 2 win!");
       _gameTimer.StopTimer();
       return true;
@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
     if (gridFull)
     {
       _currentGameStates = GameResults.draw;
-      StatsManager.instance.RecordGame(GameResults.draw, _gameTimer.GetTime()); // ADD
+      StatsManager.instance.RecordGame(GameResults.draw, _gameTimer.GetTime());
       GameOverPopup("Draw!");
       _gameTimer.StopTimer();
       return true;
@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour
     }
     if (_gridManager.GetSpecificSquareState(clickedSquare) != GridSquareState.empty) { return; }
 
+    AudioManager.instance.PlacementClick();
     ProcessTurn(_currentTurn, clickedSquare);
 
   }

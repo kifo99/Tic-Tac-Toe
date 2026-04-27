@@ -304,8 +304,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3732524459364073344, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732524459364073344, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732524459364073344, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732524459364073344, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4455859877859629399, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
       propertyPath: m_Name
@@ -438,6 +450,10 @@ PrefabInstance:
     - target: {fileID: 2017933341800716847, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732524459364073344, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnYes
       objectReference: {fileID: 0}
     - target: {fileID: 4455859877859629399, guid: 2eaaf1c06b0396f49b3168845d679712, type: 3}
       propertyPath: m_Name

@@ -63,6 +63,7 @@ public class UIManager : MonoBehaviour
             Destroy(_currentPanel);
 
         _currentPanel = Instantiate(panelToOpen, _canvas);
+        AudioManager.instance.PlayPopup();
     }
 
     public void ClosePanel()
