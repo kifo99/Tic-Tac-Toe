@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5027732811809422639}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: OnStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -212,7 +212,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: 'Start
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87ef96dd88e2f95479165db67e980bd2, type: 2}
   m_sharedMaterial: {fileID: 6028910786328567246, guid: 87ef96dd88e2f95479165db67e980bd2, type: 2}
