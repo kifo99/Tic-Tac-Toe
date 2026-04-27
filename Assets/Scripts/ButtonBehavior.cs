@@ -25,6 +25,8 @@ public class ButtonBehavior : MonoBehaviour
     public void OnStats()
     {
         UIManager.instance.OpenPanel(_uiData.GetStatsPanel());
+
+        _uiData.GetStatsPanel().GetComponentInChildren<StatsUI>().RefreshStats();
     }
 
     public void OnSettings()

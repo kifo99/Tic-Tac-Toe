@@ -873,6 +873,7 @@ GameObject:
   - component: {fileID: 4553531221409200548}
   - component: {fileID: 1584567004636720998}
   - component: {fileID: 3354167882277046854}
+  - component: {fileID: 7353136265396056375}
   m_Layer: 0
   m_Name: StatsPopup
   m_TagString: Untagged
@@ -940,6 +941,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7353136265396056375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8600156047901256035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ef93e6d2ac07441b743cd720278ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatsUI
+  _totalGamesText: {fileID: 8838136451971961274}
+  _playerOneWinsText: {fileID: 793323801853944127}
+  _playerTwoWinsText: {fileID: 4824556575680460474}
+  _drawsText: {fileID: 8069160246821180728}
+  _avgDurationText: {fileID: 2188997730416872334}
 --- !u!1001 &7774447827075395609
 PrefabInstance:
   m_ObjectHideFlags: 0
